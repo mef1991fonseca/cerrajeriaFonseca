@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body class="container">
     <nav class="navbar">
-        <div class="logo"><img src="./assets/img/logo.jpeg" alt=""></div>
-        <ul>
+        <div class="logo" data-aos="fade-right"><img src="./assets/img/logo.jpeg" alt=""></div>
+        <ul data-aos="fade-left">
             <li><a href="#">Home</a></li>
             <li><a href="./pages/servicios.html">Services</a></li>
             <li><a href="./pages/productos.html">Products</a></li>
@@ -40,5 +41,9 @@
             <p><i>@2022 Cerrajeria N.E.F.</i></p>
         </div>   
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
