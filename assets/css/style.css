@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Patrick+Hand&family=Play&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    /*font-family: 'Dancing Script', cursive;*/
+    font-family: 'Patrick Hand', cursive;
+    /*font-family: 'Play', sans-serif;*/
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "navbar"
+                         "main"
+                         "footer";
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom,
+        rgba(19,201,238,1),
+        rgba(91,218,175,1),
+        rgba(233,250,46,1)
+        );
+    grid-area: navbar;  
+    width: 100%;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar ul li{
+    list-style: none; 
+    padding: 6px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(19,201,238);
+    font-size: 16px;
+}
+
+.logo img{
+    height: 50px;
+    border-radius: 8px;
+}
+
+.logo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.imgBanner{
+    width: 100%;
+    background-size: cover;
+}
+
+.mainProductos{
+    grid-area: main;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;/*Para poder usar wrap debo definir un ancho en los hijos*/
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    margin: 5px;
+    width: 270px;
+    height: 150px;
+    border: 2px solid rgb(91,218,175);
+    border-radius: 10px;
+    padding: 6px 0 0 5px;
+}
+
+.card div{
+    margin: 5px;
+}
+
+.card img{
+    width: 130px;
+    height: 130px;
+}
+
+.info__btn{
+    background-color: rgb(91,218,175);
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.mainNosotros{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.nosotros__img img{
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+}
+
+.nosotros{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.nosotros h3{
+    padding-bottom: 10px;
+}
+
+.nosotros h4{
+    padding-bottom: 10px;
+}
+
+.nosotros p{
+    padding-bottom: 10px;
+}
+
+.mainContacto{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.contacto{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 15px;
+}
+
+.contacto h3{
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.contacto input{
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.contacto textarea{
+    margin-bottom: 15px;
+    width: 200px;
+}
+
+.btn{
+    background-color: rgba(91,218,175,1);
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+    width: 150px;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    margin-top: 10px;
+    grid-template-areas: "contact  redes"
+                         "derechos derechos";
+    background: linear-gradient(to bottom,
+        rgba(2,210,197,1),
+        rgba(91,218,175,1),
+        rgba(233,250,46,1)
+        );
+}
+
+.footer__contact{
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.footer__contact h4{
+    font-size: 16px;
+}
+
+.footer__contact p{
+    font-size: 12px;
+}
+
+.footer__redes{
+    grid-area: redes;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-end;
+    margin-left: 40px;
+}
+
+.footer__redes img{
+    width: 25px;
+    height: 25px;
+    margin: 7px;
+}
+
+.footer__derechos{
+    grid-area: derechos;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 3px;
+}
+
+.footer__derechos p{
+    font-size: 14px;
+}
+
+
+@media(min-width:576px){
+    .navbar{
+        height: 70px;
+    }
+    .navbar ul li{
+        padding: 14px;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+    .logo img{
+        height: 69px;
+    }
+    .logo{
+        width: 120px;
+        order: 1;
+    }
+    .navbar ul:nth-child(2){
+        order: 2;
+    }
+    .navbar ul{
+        align-items: center;
+    }
+    .footer__contact h4{
+        font-size: 20px;
+        padding-bottom: 6px;
+    }
+    .footer__contact p{
+        font-size: 16px;
+        padding: 2px;
+    }
+    .footer__redes img{
+        width: 40px;
+        height: 40px;
+    }
+    .footer__redes a{
+        padding: 18px;
+    }
+    .footer__derechos p{
+        font-size: 20px;
+    }
+    .nosotros{
+        width: 395px;
+    }
+    .nosotros h3{
+        font-size: 30px;
+    }
+    .nosotros h4{
+        font-size: 20px;
+    }
+    .nosotros p{
+        font-size: 16px;
+    }
+    
+    .contacto{
+        width: 450px;
+    }
+
+    .contacto h3{
+        font-size: 30px;
+    }
+
+    .contacto input{
+        width: 220px;
+    }
+
+    .contacto textarea{
+        width: 220px;
+    }
+
+    .btn{
+        width: 180px;
+    }
+
+    .ubicacion iframe{
+        width: 500px;
+    }
+}
+
+@media(min-width:768px){
+    .navbar{
+        height: 90px;
+    }
+   
+    .navbar ul li{
+        padding: 18px;
+    }
+     
+    .navbar ul li a{
+        font-size: 24px;
+    }
+    .logo{
+        padding-right: 50px;
+    }
+    .logo img{
+        height: 90px;
+    }
+    
+    .footer__contact h4{
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+    
+    .footer__contact p{
+        font-size: 20px;
+    }
+    
+    .footer__redes img{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .footer__redes a{
+        padding: 20px;
+    }
+    .footer__derechos p{
+        font-size: 24px;
+    }
+    .nosotros{
+        width: 275px;
+        height: 395px;
+    }
+    .mainNosotros{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;        
+    }
+
+    .mainContacto{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;   
+    }
+}
+
+@media(min-width:992px){
+    .navbar{
+        height: 100px;
+    }
+   
+    .navbar ul li{
+        padding: 22px;
+    }
+     
+    .navbar ul li a{
+        font-size: 26px;
+    }
+    .logo{
+        padding-right: 140px;
+    }
+    
+    .logo img{
+        height: 100px;
+    }
+    
+    .footer__contact h4{
+        font-size: 36px;
+    }
+   
+    .footer__contact p{
+        font-size: 28px;
+    }
+    
+    .footer__redes img{
+        width: 70px;
+        height: 70px;
+    }
+     
+    .footer__redes a{
+        padding: 30px;
+    }
+    
+    .footer__derechos p{
+        font-size: 28px;
+    }
+    .nosotros{
+        width: 400px;
+    }
+    .nosotros h3{
+        font-size: 34px;
+    }
+    .nosotros h4{
+        font-size: 26px;
+    }
+    .nosotros p{
+        font-size: 20px;
+    }
+    
+}
+
+
+@media(min-width:1200px){
+    
+    .navbar{
+        height: 120px;
+    }
+   
+    .navbar ul li{
+        padding: 26px;
+    }
+     
+    .navbar ul li a{
+        font-size: 30px;
+    }
+    
+    .logo{
+        padding-right: 160px;
+    }
+    
+    .logo img{
+        height: 120px;
+    }
+    
+    .footer__contact h4{
+        font-size: 40px;
+    }
+   
+    .footer__contact p{
+        font-size: 30px;
+    }
+   
+    .footer__redes img{
+        width: 80px;
+        height: 80px;
+    }
+     
+    .footer__redes a{
+        padding: 34px;
+    }
+     
+    .footer__derechos p{
+        font-size: 30px;
+    }
+    .nosotros{
+        width: 500px;
+    }
+    .nosotros h3{
+        font-size: 38px;
+    }
+    .nosotros h4{
+        font-size: 30px;
+    }
+    .nosotros p{
+        font-size: 24px;
+    }
+    .contacto{
+        width: 600px;
+    }
+
+    .contacto h3{
+        font-size: 40px;
+    }
+
+    .contacto input{
+        width: 260px;
+    }
+
+    .contacto textarea{
+        width: 260px;
+    }
+
+    .btn{
+        width: 200px;
+    }
+
+    .ubicacion iframe{
+        width: 550px;
+    }
+    
+}
